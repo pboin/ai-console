@@ -49,8 +49,8 @@ cd /root
 # point Git to the Windows certificate store
 # git config --global http.sslBackend schannel
 openssl s_client -showcerts -connect gitea.home.boin.org:3000 </dev/null 2>/dev/null|openssl x509 -outform PEM > gitea_home_boin_org.crt
-sudo cp gitea_home_boin_org.crt /usr/local/share/ca-certificates/gitea_home_boin_org.crt
-sudo update-ca-certificates
+cp gitea_home_boin_org.crt /usr/local/share/ca-certificates/gitea_home_boin_org.crt
+update-ca-certificates
 git clone https://gitea.home.boin.org:3000/pboin/boin-ai-lab.git
 
 # ssh setup
